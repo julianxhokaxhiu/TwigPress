@@ -18,7 +18,19 @@ In fact there's not much to explain. When you want to run TwigPress in your temp
 and the arguments you can use until now are:
 
 ### 0.1 ###
-* `vars`: your custom template variables you could use on your .twig templates within the `tplapi` keyworkd.
+* `vars`: your custom template variables you could use on your .twig templates within the `tplapi` keyword.
+
+### Examples ###
+<code>
+<?php  
+    new TwigPress(array(  
+        "vars" => array(  
+            "myname" => "Author name",  
+            "mysurname" => "Author surname"  
+        )  
+    ));  
+?>
+</code>
 
 ## Template API ##
 TwigPress comes with three main API keywords:
@@ -34,6 +46,22 @@ TwigPress comes with three main API keywords:
         * `addJs` same as `addCss` but this time for Javascript files.
 
 * `tplapi` this will be your custom vars that you'll pass to TwigPress when you initialize your Class.
+
+### Examples ###
+<code>
+<?php  
+    {# Wordpress API call #}  
+    Wordpress Name: {{ wpapi.get_bloginfo('name') }}  
+    Wordpress Description: {{ wpapi.get_bloginfo('description') }}  
+  
+    {# TwigPress API call #}  
+    Current template: {{twpapi.template_name }}  
+  
+    {# Template API call #}  
+    My name: {{ tplapi.myname }}  
+    My Surname: {{ tplapi.mysurname }}  
+?>
+</code>
 
 ## License ##
 This project is covered up by **GPLv3** license. You can find it attached to any .php file and the LICENSE file itself.
