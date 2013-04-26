@@ -24,7 +24,7 @@
 
     /* DEBUG ONLY */
     define('TwigPress_Debug', true);
-    define('TwigPress_Template_URI', get_template_directory_uri().'/templates');
+    define('TwigPress_Template_URI', get_stylesheet_directory_uri().'/templates');
 
     class WP_API_Proxy{
         /*
@@ -65,9 +65,9 @@
         protected $apis;
         protected $twig;
         function __construct($args = array()){
-            $loader = new Twig_Loader_Filesystem(__DIR__.'/templates');
+            $loader = new Twig_Loader_Filesystem(get_stylesheet_directory().'/templates');
             $this->twig = new Twig_Environment($loader, array(
-                'cache' => TwigPress_Debug ? false : __DIR__.'/cache',
+                'cache' => TwigPress_Debug ? false : get_stylesheet_directory().'/cache',
                 'debug' => TwigPress_Debug
             ));
             if(TwigPress_Debug) $this->twig->addExtension(new Twig_Extension_Debug());
