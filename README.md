@@ -1,4 +1,4 @@
-# TwigPress: A boilerplate Twig Theme Engine for Wordpress #
+# TwigPress #
 
 ## What is TwigPress? ##
 TwigPress is a Wordpress theme which is based upon Twig Engine. Probably it could be flagged also as "another Twig Engine Theme for Wordpress".
@@ -8,12 +8,12 @@ TwigPress was born with ease in mind, cleaner APIs and ease to extended. Well, k
 
 ## API ##
 In fact there's not much to explain. When you want to run TwigPress in your template file you just have to do something like
-  
-<code>
-<?php  
-  new TwigPress(array(/* your arguments here */));  
-?>
-</code>
+
+<pre>
+&lt;?php
+  new TwigPress(array(/* your arguments here */));
+?&gt;
+</pre>
 
 and the arguments you can use until now are:
 
@@ -21,16 +21,16 @@ and the arguments you can use until now are:
 * `vars`: your custom template variables you could use on your .twig templates within the `tplapi` keyword.
 
 ### Examples ###
-<code>
-<?php  
-    new TwigPress(array(  
-        "vars" => array(  
-            "myname" => "Author name",  
-            "mysurname" => "Author surname"  
-        )  
-    ));  
-?>
-</code>
+<pre>
+&lt;?php
+    new TwigPress(array(
+        "vars" =&gt; array(
+            "myname" =&gt; "Author name",
+            "mysurname" =&gt; "Author surname"
+        )
+    ));
+?&gt;
+</pre>
 
 ## Template API ##
 TwigPress comes with three main API keywords:
@@ -48,20 +48,20 @@ TwigPress comes with three main API keywords:
 * `tplapi` this will be your custom vars that you'll pass to TwigPress when you initialize your Class.
 
 ### Examples ###
-<code>
-<?php  
-    {# Wordpress API call #}  
-    Wordpress Name: {{ wpapi.get_bloginfo('name') }}  
-    Wordpress Description: {{ wpapi.get_bloginfo('description') }}  
-  
-    {# TwigPress API call #}  
-    Current template: {{twpapi.template_name }}  
-  
-    {# Template API call #}  
-    My name: {{ tplapi.myname }}  
-    My Surname: {{ tplapi.mysurname }}  
-?>
-</code>
+<pre>
+&lt;?php
+    {# Wordpress API call #}
+    Wordpress Name: {{ wpapi.get_bloginfo('name') }}
+    Wordpress Description: {{ wpapi.get_bloginfo('description') }}
+
+    {# TwigPress API call #}
+    Current template: {{twpapi.template_name }}
+
+    {# Template API call #}
+    My name: {{ tplapi.myname }}
+    My Surname: {{ tplapi.mysurname }}
+?&gt;
+</pre>
 
 ## License ##
 This project is covered up by **GPLv3** license. You can find it attached to any .php file and the LICENSE file itself.
