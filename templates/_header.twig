@@ -1,0 +1,8 @@
+<html>
+    <head>
+        {{ twpapi.fn.addCss('/css/style.css') }}
+        {{ twpapi.fn.addJs('/js/script.js') }}
+        {# This is necessary to print all the things you do before :) #}
+        {{ wpapi.wp_head() }}
+    </head>
+    <body {{wpapi.body_class()}}>
