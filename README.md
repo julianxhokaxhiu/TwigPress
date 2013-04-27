@@ -54,18 +54,16 @@ TwigPress comes with three main API keywords:
 
 ### Examples ###
 <pre>
-&lt;?php
-    {# Wordpress API call #}
-    Wordpress Name: {{ wpapi.get_bloginfo('name') }}
-    Wordpress Description: {{ wpapi.get_bloginfo('description') }}
+{# Wordpress API call #}
+Wordpress Name: {{ wpapi.get_bloginfo('name') }}
+Wordpress Description: {{ wpapi.get_bloginfo('description') }}
 
-    {# TwigPress API call #}
-    Current template: {{twpapi.template_name }}
+{# TwigPress API call #}
+Current template: {{twpapi.template_name }}
 
-    {# Template API call #}
-    My name: {{ tplapi.myname }}
-    My Surname: {{ tplapi.mysurname }}
-?&gt;
+{# Template API call #}
+My name: {{ tplapi.myname }}
+My Surname: {{ tplapi.mysurname }}
 </pre>
 
 ## License ##
