@@ -67,5 +67,5 @@ My Surname: {{ tplapi.mysurname }}
 </pre>
 
 ## License ##
-This project is covered up by **GPLv3** license. You can find it attached to any .php file and the LICENSE file itself.
+This project is covered up by **MIT** license. You can find it attached to any .php file and the LICENSE file itself.
 Please keep it open as much as you can :)
