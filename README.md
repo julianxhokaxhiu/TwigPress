@@ -9,7 +9,7 @@ TwigPress was born with ease in mind, cleaner APIs and ease to extended. Well, k
 ## How does it work? ##
 Basically you only have to work inside "templates" directory. You do not have to touch anything at all.
 If you need to enable/disable Debug function on Twig you just have to change `TwigPress_Debug` define to `true` or `false`.
-By default it will always be enabled. Keep in mind that if you enable it you'll have cache disabled, if enabled, cache will be enabled.
+By default it will always be enabled. Keep in mind that if you enable it you'll have cache disabled, if debug is diabled, caching will be enabled.
 
 ## API ##
 In fact there's not much to explain. When you want to run TwigPress in your template file you just have to do something like
